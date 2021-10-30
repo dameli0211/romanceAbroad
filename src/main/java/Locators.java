@@ -7,6 +7,9 @@ public class Locators {
     public static final By BUTTTON_REGISTRATION = By.xpath("//button[@id='show-registration-block']");
     public static final By TEXT_FIELD_EMAIL= By.cssSelector("input#email");
     public static final By TEXT_FIELD_PASSWORD = By.cssSelector("input#password");
+    public static final By TEXT_FIELD_NICKNAME = By.cssSelector("#nickname");
+    public static final By TEXT_PHONE = By.cssSelector("input[name='data[phone]']");
+
     //media page
     public static final By LINK_MEDIA = By.cssSelector("a[href='https://romanceabroad.com/media/index']");
 
@@ -27,6 +30,7 @@ public class Locators {
 
     //blog page
     public static final By LINK_BLOG = By.xpath("//a[@href='https://romanceabroad.com/content/view/blog']");
+
     // search gifts page
     public static final By SEARCH_GIFT = By.cssSelector("input#search_product");
     public static final By SEARCH_FRIEND = By.xpath("//button[@id='search_friend'][text()='Search']");
