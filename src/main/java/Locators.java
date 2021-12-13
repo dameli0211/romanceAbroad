@@ -21,7 +21,7 @@ public class Locators {
 
     // search page
     public static final By LINK_SEARCH = By.xpath("//a[@href='https://romanceabroad.com/users/search']");
-
+    public static final By DROP_DOWN_LIST_SORT_BY= By.xpath("//div[@class='form-inline']//select");
     // gifts page
     public static final By LINK_FLOWER_IMG = By.xpath("//a[@href='https://romanceabroad.com/store/sweets/12-flower_basket']");
     public static final By LINK_SPA = By.xpath("//a[@href='https://romanceabroad.com/store/sweets/2-massage_spa']");
