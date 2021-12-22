@@ -9,10 +9,11 @@ public class Locators {
     public static final By TEXT_FIELD_PASSWORD = By.cssSelector("input#password");
     public static final By TEXT_FIELD_NICKNAME = By.cssSelector("#nickname");
     public static final By TEXT_PHONE = By.cssSelector("input[name='data[phone]']");
+    public static final By CHECKBOX_LIST = By.cssSelector("input#confirmation");
 
     //media page
     public static final By LINK_MEDIA = By.cssSelector("a[href='https://romanceabroad.com/media/index']");
-
+    public static final By DROP_DOWN_LIST_MEDIA = By.xpath("//select[@id='album_id']");
     //flower/gift page
     public static final By LINK_GIFT = By.xpath("//a[@href='https://romanceabroad.com/store/category-sweets']");
 

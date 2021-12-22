@@ -18,9 +18,10 @@ public class RegistrationTests extends BaseUi {
         wait.until(ExpectedConditions.elementToBeClickable(Locators.BUTTON_NEXT));
         driver.findElement(Locators.BUTTON_NEXT).click();
         driver.findElement(Locators.TEXT_FIELD_NICKNAME).sendKeys(Data.nickname);
+        wait.until(ExpectedConditions.visibilityOf(driver.findElement(Locators.TEXT_FIELD_NICKNAME)));
         driver.findElement(Locators.TEXT_PHONE).sendKeys(Data.phone);
 
-        WebElement checkboxConfirmation = driver.findElement(By.cssSelector("input#confirmation"));
+        WebElement checkboxConfirmation = driver.findElement(Locators.CHECKBOX_LIST);
         boolean selectedCheckbox = checkboxConfirmation.isSelected();
         System.out.println(selectedCheckbox + " !!!!!!!!!");
         checkboxConfirmation.click();

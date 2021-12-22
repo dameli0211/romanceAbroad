@@ -14,20 +14,21 @@ public class SearchTests extends BaseUi{
         currentUrlSearch = driver.getCurrentUrl();
         System.out.println(currentUrlSearch);
         Assert.assertEquals(currentUrlSearch, Data.expectedUrlSearch);
-        try {
+        /*try {
             Thread.sleep(3000);
         } catch (InterruptedException e) {
             e.printStackTrace();
-        }
+        }*/
         /*Select select = new Select(driver.findElement(By.xpath("//div[@class='form-inline']//select")));
         select.selectByVisibleText("Views");*/
 
 
         WebElement dropDownListSortBy = driver.findElement(Locators.DROP_DOWN_LIST_SORT_BY);
-        getDropDownListByIndex(dropDownListSortBy, 3);
-        /*getDropDownListByText(Locators.DROP_DOWN_LIST_SORT_BY, "Views");
-        getDropDownListByValue(Locators.DROP_DOWN_LIST_SORT_BY, "data_created");
-*/
+        /*getDropDownListByIndex(dropDownListSortBy, 3);*/
+        /*getDropDownListByText(Locators.DROP_DOWN_LIST_SORT_BY, "Views");*/
+        getDropDownListByValue(dropDownListSortBy, "date_created");
+
+
 
     }
 
@@ -45,4 +46,7 @@ public class SearchTests extends BaseUi{
         Select select = new Select(element);
         select.selectByValue(value);
     }
+
+
+
 }
