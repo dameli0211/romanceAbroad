@@ -5,6 +5,8 @@ public class SearchPage extends BaseActions {
     public SearchPage(WebDriver driver, WebDriverWait wait) {
         super(driver, wait);
     }
-
+  public void searchSection(){
+      driver.findElement(Locators.LINK_SEARCH).click();
+  }
 
 }

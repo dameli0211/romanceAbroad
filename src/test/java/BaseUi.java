@@ -3,13 +3,10 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
-
 import java.time.Duration;
 
 
-
-
-public class BaseUi {
+   public class BaseUi {
     WebDriver driver;
     WebDriverWait wait;
     String mainUrl="https://romanceabroad.com/";
@@ -21,6 +18,9 @@ public class BaseUi {
     MainIframePage mainIframePage;
     GiftPage2 giftPage2;
     TourToUkrainePage tourToUkrainePage;
+    BlogPage blogPage;
+    MediaPage mediaPage;
+    RequestTourPage requestTourPage;
 
     @BeforeMethod
     public void setUp(){
@@ -36,7 +36,11 @@ public class BaseUi {
         mainIframePage = new MainIframePage(driver, wait);
         giftPage2 = new GiftPage2(driver, wait);
         tourToUkrainePage = new TourToUkrainePage(driver, wait);
-        driver.manage().window().maximize();)
+        requestTourPage = new RequestTourPage(driver, wait);
+        blogPage = new BlogPage(driver, wait);
+        mediaPage = new MediaPage(driver, wait);
+
+        driver.manage().window().maximize();
         driver.get(mainUrl);
     }
 

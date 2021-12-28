@@ -10,6 +10,13 @@ public class Locators {
     public static final By TEXT_FIELD_NICKNAME = By.cssSelector("#nickname");
     public static final By TEXT_PHONE = By.cssSelector("input[name='data[phone]']");
     public static final By CHECKBOX_LIST = By.cssSelector("input#confirmation");
+    public static final By RADIO_BUTTON_DAY = By.cssSelector("#daySelect");
+    public static final By RADIO_BUTTON_DAY_1 = By.xpath("//li[@data-handler='selectDay']//a[text()='2']");
+    public static final By RADIO_BUTTON_MONTH = By.cssSelector("#monthSelect");
+    public static final By RADIO_BUTTON_MONTH_1 = By.xpath("//li[@data-handler='selectMonth']//a[text()='May']");
+    public static final By RADIO_BUTTON_YEAR = By.cssSelector("#yearSelect");
+    public static final By RADIO_BUTTON_YEAR_1 = By.xpath("//li[@data-handler='selectYear']//a[text()='2001']");
+
 
     //media page
     public static final By LINK_MEDIA = By.cssSelector("a[href='https://romanceabroad.com/media/index']");

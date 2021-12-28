@@ -1,4 +1,3 @@
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -26,12 +25,12 @@ public class RegistrationPage extends BaseActions {
     public void completeSecondPartOfRegistration(){
         driver.findElement(Locators.BUTTON_NEXT).click();
         driver.findElement(Locators.TEXT_FIELD_NICKNAME).sendKeys(generateNewNumber(Data.nickname, 10));
-        driver.findElement(By.cssSelector("#daySelect")).click();
-        driver.findElement(By.xpath("//li[@data-handler='selectDay']//a[text()='2']")).click();
-        driver.findElement(By.cssSelector("#monthSelect")).click();
-        driver.findElement(By.xpath("//li[@data-handler='selectMonth']//a[text()='May']")).click();
-        driver.findElement(By.cssSelector("#yearSelect")).click();
-        driver.findElement(By.xpath("//li[@data-handler='selectYear']//a[text()='2001']")).click();
+        driver.findElement(Locators.RADIO_BUTTON_DAY).click();
+        driver.findElement(Locators.RADIO_BUTTON_DAY_1).click();
+        driver.findElement(Locators.RADIO_BUTTON_MONTH).click();
+        driver.findElement(Locators.RADIO_BUTTON_MONTH_1).click();
+        driver.findElement(Locators.RADIO_BUTTON_YEAR).click();
+        driver.findElement(Locators.RADIO_BUTTON_YEAR_1).click();
         wait.until(ExpectedConditions.visibilityOf(driver.findElement(Locators.TEXT_FIELD_NICKNAME)));
         driver.findElement(Locators.TEXT_PHONE).sendKeys(Data.phone);
 

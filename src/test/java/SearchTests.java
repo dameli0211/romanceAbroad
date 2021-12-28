@@ -8,7 +8,7 @@ public class SearchTests extends BaseUi{
 
     @Test
     public void testSearchPage(){
-        driver.findElement(Locators.LINK_SEARCH).click();
+        searchPage.searchSection();
         currentUrlSearch = driver.getCurrentUrl();
         System.out.println(currentUrlSearch);
         Assert.assertEquals(currentUrlSearch, Data.expectedUrlSearch);

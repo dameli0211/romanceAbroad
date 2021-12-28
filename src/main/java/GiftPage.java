@@ -10,7 +10,7 @@ public class GiftPage extends BaseActions {
         super(driver, wait);
     }
 public void giftSection() {
-        driver.findElement(Locators.LINK_GIFT).click();
+    driver.findElement(Locators.LINK_GIFT).click();
     wait.until(ExpectedConditions.elementToBeClickable(Locators.LINK_FLOWER_IMG));
     driver.findElement(Locators.LINK_FLOWER_IMG).click();
     wait.until(ExpectedConditions.elementToBeClickable(Locators.LINK_SPA));

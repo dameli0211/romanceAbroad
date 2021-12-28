@@ -9,7 +9,7 @@ public class MediaTests extends BaseUi {
 
     @Test
     public void testMediaPage() {
-        driver.findElement(Locators.LINK_MEDIA).click();
+        mediaPage.mediaSection();
         currentUrlMedia = driver.getCurrentUrl();
         System.out.println(currentUrlMedia);
         Assert.assertEquals(currentUrlMedia, Data.expectedUrlMedia);

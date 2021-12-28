@@ -1,4 +1,3 @@
-import org.openqa.selenium.By;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -8,9 +7,9 @@ public class BlogTests extends BaseUi {
 
     @Test
     public void testBlogPage(){
-    driver.findElement(Locators.LINK_BLOG).click();
     currentUrlBlog = driver.getCurrentUrl();
     System.out.println(currentUrlBlog);
     Assert.assertEquals(currentUrlBlog, Data.expectedUrlBlog);
+    blogPage.blogSection();
     }
 }

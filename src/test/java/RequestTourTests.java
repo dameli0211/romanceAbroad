@@ -9,7 +9,7 @@ public class RequestTourTests extends BaseUi{
 
     @Test
     public void testRequestTour(){
-        driver.findElement(Locators.LINK_REQUEST_TOUR).click();
+        requestTourPage.RequestTourSection();
         currentTourRequest = driver.getCurrentUrl();
         System.out.println(currentTourRequest);
         Assert.assertEquals(currentTourRequest, expectedTourRequest);
