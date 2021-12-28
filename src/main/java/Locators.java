@@ -19,7 +19,8 @@ public class Locators {
 
     //request tour
     public static final By LINK_REQUEST_TOUR = By.cssSelector("a[href='https://romanceabroad.com/REQUEST_TOUR_INFO+Application_Form.doc']");
-
+    public static final By SEARCH_PRODUCT = By.cssSelector("input#search_product");
+    public static final By SEARCH_FRIEND_1= By.xpath("//button[@id='search_friend']");
     // search page
     public static final By LINK_SEARCH = By.xpath("//a[@href='https://romanceabroad.com/users/search']");
     public static final By DROP_DOWN_LIST_SORT_BY= By.xpath("//div[@class='form-inline']//select");
@@ -39,5 +40,10 @@ public class Locators {
 
     //how we work page
     public static final By LINK_HOW_WE_WORK = By.xpath("//ul//a[@href='https://romanceabroad.com/content/view/how-it-works']");
+    public static final By LINK_HOW_WE_WORK_1 = By.xpath("//a[@href='https://romanceabroad.com/content/view/how-it-works']");
+    public static final By LINK_HOW_WE_WORK_2 = By.xpath("//a[@href='https://romanceabroad.com/content/view/shipping_terms']");
 
+    //main page framework
+    public static final By IFRAME_TEST = By.xpath("//iframe[@src='https://www.youtube.com/embed/RRECuJzm3IY?start=85']");
+    public static final By IFRAME_BUTTON = By.xpath("//button[@class='ytp-large-play-button ytp-button']");
 }
