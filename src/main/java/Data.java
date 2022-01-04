@@ -1,5 +1,3 @@
-import org.openqa.selenium.By;
-
 public class Data {
 
     public static final String expectedUrlMedia = "https://romanceabroad.com/media/index";
@@ -11,4 +9,5 @@ public class Data {
     public static final String phone = "1234567898";
 
 
+    public static final  String mainUrl= "https://romanceabroad.com/";
 }

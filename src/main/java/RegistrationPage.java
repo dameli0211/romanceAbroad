@@ -1,5 +1,4 @@
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -7,7 +6,8 @@ import java.time.Duration;
 
 public class RegistrationPage extends BaseActions {
         public RegistrationPage(WebDriver driver, WebDriverWait wait) {
-        super(driver, wait);
+
+            super(driver, wait);
     }
 
     public void clickJoinButton(){
@@ -34,10 +34,10 @@ public class RegistrationPage extends BaseActions {
         wait.until(ExpectedConditions.visibilityOf(driver.findElement(Locators.TEXT_FIELD_NICKNAME)));
         driver.findElement(Locators.TEXT_PHONE).sendKeys(Data.phone);
 
-        WebElement checkboxConfirmation = driver.findElement(Locators.CHECKBOX_LIST);
+        /*WebElement checkboxConfirmation = driver.findElement(Locators.CHECKBOX_LIST);
         boolean selectedCheckbox = checkboxConfirmation.isSelected();
         System.out.println(selectedCheckbox + " !!!!!!!!!");
-        checkboxConfirmation.click();
+        checkboxConfirmation.click();*/
     }
 }
 
