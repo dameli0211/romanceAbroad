@@ -5,5 +5,4 @@ public class HowWeWorkTests extends BaseUi{
     public void testHowWeWork(){
         howWeWorkPage.howWeWorkSection();
     }
-
 }

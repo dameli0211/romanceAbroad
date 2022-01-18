@@ -6,5 +6,4 @@ public class TourToUkraineTests extends BaseUi{
     public void tourToUkraine(){
         tourToUkrainePage.TourToUkraineSection();
     }
-
 }

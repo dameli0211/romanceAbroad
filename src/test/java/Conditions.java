@@ -1,12 +1,5 @@
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
-import org.testng.Assert;
-import org.testng.annotations.Test;
-
-import java.util.List;
-
 public class Conditions extends BaseUi {
-    @Test
+    /*@Test
     public void test1(){
         String fruit1 = "kiwi";
         String fruit2 = "kiwi";
@@ -29,7 +22,7 @@ public class Conditions extends BaseUi {
             sum = 100 - 95;
         }
         System.out.println(sum);
-    }
+    }*/
 
    /* @Test
     public void test3(){
@@ -86,7 +79,7 @@ public class Conditions extends BaseUi {
         int sum = crunchifyList1.get(1)+crunchifyList1.get(2);
         System.out.println(sum);
     }*/
-    @Test
+    /*@Test
     public void test8(){
         List<WebElement> links = driver.findElements(By.xpath("//ul[@class='navbar-nav']//li"));
         System.out.println(links.size());
@@ -94,9 +87,11 @@ public class Conditions extends BaseUi {
         String info = links.get(i).getText();
             System.out.println(info);
             links.get(i).click();
-            driver.get(Data.mainUrl);
-            links = driver.findElements(By.xpath("//ul[@class='navbar-nav']//li"));
+            //driver.get(Data.mainUrl);
+            //links = driver.findElements(By.xpath("//ul[@class='navbar-nav']//li"));
         }
     }
+*/
+
 
 }

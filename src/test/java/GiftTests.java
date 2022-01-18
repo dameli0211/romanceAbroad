@@ -6,4 +6,8 @@ public class GiftTests extends BaseUi {
     public void giftPage1() {
         giftPage.giftSection();
     }
+
+
+
+
 }
