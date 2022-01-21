@@ -11,15 +11,9 @@ public class RegistrationTests extends BaseUi {
         registrationPage.completeSecondPartOfRegistration();
 
         WebElement checkbox = driver.findElement(Locators.CHECKBOX_LIST);
-
-        if (!checkbox.isSelected()) {
-            checkbox.click();
-            System.out.println("Checkbox is selected");
-        }
+        softAssert.assertEquals(!checkbox.isSelected(), "Element is displayed");
+        checkbox.click();
     }
-
-
-
 }
 
 

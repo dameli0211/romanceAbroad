@@ -1,5 +1,4 @@
 import org.openqa.selenium.WebElement;
-import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class MediaTests extends BaseUi {
@@ -12,7 +11,8 @@ public class MediaTests extends BaseUi {
         mediaPage.mediaSection();
         currentUrlMedia = driver.getCurrentUrl();
         System.out.println(currentUrlMedia);
-        Assert.assertEquals(currentUrlMedia, Data.expectedUrlMedia, "It's wrong");
+        //Assert.assertEquals(currentUrlMedia, Data.expectedUrlMedia, "It's wrong");
+        softAssert.assertEquals(currentUrlMedia, Data.expectedUrlMedia, "It's wrong");
 
         WebElement dropDownListMedia = driver.findElement(Locators.DROP_DOWN_LIST_MEDIA);
         /*getDropDownMediaByIndex(dropDownListMedia, 2);*/

@@ -35,39 +35,23 @@ import java.time.Duration;
 
     public void setup(@Optional("chrome") String browser, Method method){
         // Check if parameter passed from TestNG is 'firefox'
-
         if (browser.equalsIgnoreCase("firefox")) {
-
             // Create firefox instance
-
             System.setProperty("webdriver.gecko.driver", "geckodriver");
-
             driver = new FirefoxDriver();
-
         }
 
         // Check if parameter passed as 'chrome'
-
         else if (browser.equalsIgnoreCase("chrome")) {
-
             // Set path to chromedriver.exe
-
             System.setProperty("webdriver.chrome.driver", "chromedriver");
-
             // Create chrome instance
-
             driver = new ChromeDriver();
-
             driver.get("chrome://settings/clearBrowserData");
-
         } else {
-
             System.setProperty("webdriver.chrome.driver", "chromedriver");
-
             driver = new ChromeDriver();
-
             driver.get("chrome://settings/clearBrowserData");
-
         }
 
 

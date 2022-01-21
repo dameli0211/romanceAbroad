@@ -1,5 +1,4 @@
 import org.openqa.selenium.By;
-import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import java.util.ArrayList;
@@ -15,7 +14,9 @@ public class BlogTests extends BaseUi {
      blogPage.blogSection();
     currentUrlBlog = driver.getCurrentUrl();
     System.out.println(currentUrlBlog);
-    Assert.assertEquals(currentUrlBlog, Data.expectedUrlBlog);
+    //Assert.assertEquals(currentUrlBlog, Data.expectedUrlBlog);
+    softAssert.assertEquals(currentUrlBlog, Data.expectedUrlBlog, "Url is wrong");
+    softAssert.assertAll();
     }
 
     @Test
