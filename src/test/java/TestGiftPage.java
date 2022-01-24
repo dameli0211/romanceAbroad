@@ -1,12 +1,12 @@
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class TestGiftPage extends BaseUi{
+public class TestGiftPage extends BaseUi {
 
     String currentUrlGift;
 
     @Test
-    public void assertionOfURL(){
+    public void assertionOfURL() {
         Assert.assertTrue(driver.findElement(Locators.LINK_GIFT).isDisplayed(), "Element is not displayed");
         driver.findElement(Locators.LINK_GIFT).click();
         currentUrlGift = driver.getCurrentUrl();
@@ -17,7 +17,10 @@ public class TestGiftPage extends BaseUi{
     }
 
     @Test
-    public void testGift2Page(){
+    public void testGift2Page() {
+
         giftPage2.giftPageSection();
     }
 }
+
+

@@ -14,6 +14,8 @@ public class RegistrationTests extends BaseUi {
         softAssert.assertEquals(!checkbox.isSelected(), "Element is displayed");
         checkbox.click();
     }
+
+
 }
 
 

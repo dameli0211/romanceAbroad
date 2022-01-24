@@ -27,5 +27,27 @@ public class FlowerTests extends BaseUi {
             flowerLink.get(i).click();
         }
     }
+
+    /*@Test
+    public void flowersCondition() {
+         String expectedTitleTeddyBear = "Teddy bear";
+        List<WebElement> flCondition = driver.findElements(Locators.LINK_GIFT );
+        System.out.println(flCondition.size());
+
+        for (int i = 0; i < flCondition.size(); i++) {
+            String teddyBearInfo = flCondition.get(i).getText();
+            System.out.println(teddyBearInfo);
+            flCondition.get(i).click();
+
+            if(flCondition.contains("Teddy")){
+                String actualTitle = driver.findElement(By.xpath("//h1[@class='title']")).getText();
+                Assert.assertEquals(expectedTitleTeddyBear, actualTitle);
+            }
+
+            if()
+        }
+    }*/
+
+
 }
 
