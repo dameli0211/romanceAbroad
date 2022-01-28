@@ -14,9 +14,5 @@ public class RequestTourTests extends BaseUi{
         System.out.println(currentTourRequest);
         Assert.assertEquals(currentTourRequest, Data.expectedTourRequest);
     }
-
-
-
-
 }
 

@@ -13,4 +13,5 @@ public class Data {
 
 
     public static final  String mainUrl= "https://romanceabroad.com/";
+    public static final String howWeWorkUrl = "https://romanceabroad.com/content/view/how-it-works";
 }

@@ -24,6 +24,7 @@ public class Locators {
     //flower/gift page
     public static final By LINK_GIFT = By.xpath("//a[@href='https://romanceabroad.com/store/category-sweets']");
 
+
     //request tour
     public static final By LINK_REQUEST_TOUR = By.cssSelector("a[href='https://romanceabroad.com/REQUEST_TOUR_INFO+Application_Form.doc']");
     public static final By SEARCH_PRODUCT = By.cssSelector("input#search_product");
@@ -36,14 +37,15 @@ public class Locators {
     public static final By LINK_SPA = By.xpath("//a[@href='https://romanceabroad.com/store/sweets/2-massage_spa']");
     public static final By LINK_BEAR_TOY = By.xpath("//a[@href='https://romanceabroad.com/store/sweets/11-teddy_bear']");
     public static final By LINK_TOUR_UKRAIN = By.xpath("//a[@href='https://romanceabroad.com/store/sweets/20-tour_to_ukraine']");
-
-    //blog page
-    public static final By LINK_BLOG = By.xpath("//a[@href='https://romanceabroad.com/content/view/blog']");
-
-    // search gifts page
     public static final By SEARCH_GIFT = By.cssSelector("input#search_product");
     public static final By SEARCH_FRIEND = By.xpath("//button[@id='search_friend'][text()='Search']");
     public static final By LINK_BUSKET_FLOWERS = By.xpath("//a[@href='https://romanceabroad.com/store/sweets/12-flower_basket']");
+    public static final By LIST_OF_GIFTS = By.xpath("//div[@class='contrasting-block row g-bestsellers-gallery']");
+    public static final By GIFTS_TEXT_BUSKET = By.xpath("//div[text()='Flower basket']");
+    public static final By GIFTS_TEXT_SPA = By.xpath("//div[text()='Spa']");
+    public static final By GIFTS_TEXT_TEDDY = By.xpath("//div[text()='Teddy bear']");
+    //blog page
+    public static final By LINK_BLOG = By.xpath("//a[@href='https://romanceabroad.com/content/view/blog']");
 
     //how we work page
     public static final By LINK_HOW_WE_WORK = By.xpath("//ul//a[@href='https://romanceabroad.com/content/view/how-it-works']");

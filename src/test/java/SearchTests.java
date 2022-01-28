@@ -29,13 +29,13 @@ public class SearchTests extends BaseUi{
         System.out.println(listOfPhotos.size());
         for (int i = 0; i <listOfPhotos.size(); i++) {
             listOfPhotos.get(i).click();
-            //System.out.println(listOfPhotos);
+            System.out.println(listOfPhotos);
         }
     }
 
     @Test
     public void mainPage(){
-        List<WebElement> mainP = driver.findElements(By.xpath("//a[@href='https://romanceabroad.com/']"));
+        List<WebElement> mainP = driver.findElements(By.xpath("//nav[@id='mainNav']"));
         for (int i = 0; i <mainP.size(); i++) {
             if(mainP.get(i).getText().contains("PRETTY WOMEN")){
             searchPage.searchSection();

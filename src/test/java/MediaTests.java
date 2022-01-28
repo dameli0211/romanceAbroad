@@ -18,7 +18,10 @@ public class MediaTests extends BaseUi {
         /*getDropDownMediaByIndex(dropDownListMedia, 2);*/
         /*getDropDownMediaByText(dropDownListMedia, "Travel(0)");*/
         searchPage.getDropDownListByValue(dropDownListMedia, "1");
+        softAssert.assertAll();
     }
+
+
 
 
 }
