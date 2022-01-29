@@ -1,4 +1,3 @@
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -8,22 +7,16 @@ import java.util.List;
 public class HowWeWorkTests extends BaseUi{
     @Test
     public void testHowWeWork(){
+
         howWeWorkPage.howWeWorkSection();
     }
 
     @Test
     public void listOfTabs(){
-
-        String expectedTitleTermsOfUse = "Terms of use";
-        String expectedTitleAdvertising = "Advertising";
-        String expectedTitleShippingTerm = "Shipping terms";
-        String expectedUrl = "https://romanceabroad.com/content/view/advertising";
-               // "https://romanceabroad.com/content/view/how-it-works";
-
-
         driver.findElement(Locators.LINK_HOW_WE_WORK).click();
-        List<WebElement> tabs = driver.findElements(By.xpath("//div[@class='row row-content']//ul//li"));
+        List<WebElement> tabs = driver.findElements(Locators.LINK_INFORMATION_LIST);
         System.out.println(tabs.size());
+
 
         for (int i = 0; i < tabs.size(); i++) {
             String varTabs = tabs.get(i).getText();
@@ -31,25 +24,25 @@ public class HowWeWorkTests extends BaseUi{
             tabs.get(i).click();
 
             if(varTabs.contains("Advertising")) {
-                String actualTitle = driver.findElement(By.xpath("//div[text()='Advertising']")).getText();
+                String actualTitle = driver.findElement(Locators.LINK_TEXT_ADVERTISING).getText();
                 String actualUrl = driver.getCurrentUrl();
-                Assert.assertEquals(expectedTitleAdvertising, actualTitle);
-                Assert.assertEquals(expectedUrl, actualUrl);
+                Assert.assertEquals(Data.expectedTitleAdvertising, actualTitle);
+                Assert.assertEquals(Data.expectedUrl, actualUrl);
             }
 
            else if (varTabs.contains("Terms of use")) {
-                String actualTitle = driver.findElement(By.xpath("//div[text()='Terms of use']")).getText();
-                Assert.assertEquals(expectedTitleTermsOfUse, actualTitle);
+                String actualTitle = driver.findElement(Locators.LINK_TEXT_TERMS_OF_USE).getText();
+                Assert.assertEquals(Data.expectedTitleTermsOfUse, actualTitle);
             }
 
            else if(varTabs.contains("Shipping terms")) {
-                String actualTitle = driver.findElement(By.xpath("//div[text()='Shipping terms']")).getText();
-                Assert.assertEquals(expectedTitleShippingTerm, actualTitle);
-                driver.findElement(By.xpath("//div[@class='fleft'][text()='Shipping terms']")).isDisplayed();
+                String actualTitle = driver.findElement(Locators.LINK_TEXT_SHIPPING_TERMS).getText();
+                Assert.assertEquals(Data.expectedTitleShippingTerm, actualTitle);
+                driver.findElement(Locators.LINK_TEXT_SHIPPING_TERMS_1).isDisplayed();
             }
 
             driver.get(Data.howWeWorkUrl);
-            tabs = driver.findElements(By.xpath("//div[@class='row row-content']//ul//li"));
+            tabs = driver.findElements(Locators.LINK_INFORMATION_LIST);
         }
     }
 }

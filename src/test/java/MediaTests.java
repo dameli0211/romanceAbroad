@@ -8,11 +8,9 @@ public class MediaTests extends BaseUi {
 
     @Test
     public void testMediaPage() {
-        mediaPage.mediaSection();
-        currentUrlMedia = driver.getCurrentUrl();
-        System.out.println(currentUrlMedia);
+        String mediaAssertions = mediaPage.mediaSection();
         //Assert.assertEquals(currentUrlMedia, Data.expectedUrlMedia, "It's wrong");
-        softAssert.assertEquals(currentUrlMedia, Data.expectedUrlMedia, "It's wrong");
+        softAssert.assertEquals(mediaAssertions, Data.expectedUrlMedia, "It's wrong");
 
         WebElement dropDownListMedia = driver.findElement(Locators.DROP_DOWN_LIST_MEDIA);
         /*getDropDownMediaByIndex(dropDownListMedia, 2);*/
@@ -20,10 +18,6 @@ public class MediaTests extends BaseUi {
         searchPage.getDropDownListByValue(dropDownListMedia, "1");
         softAssert.assertAll();
     }
-
-
-
-
 }
 
 

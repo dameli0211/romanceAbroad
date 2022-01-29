@@ -38,7 +38,7 @@ public class RegistrationPage extends BaseActions {
         boolean selectedCheckbox = checkboxConfirmation.isSelected();
         System.out.println(selectedCheckbox + " !!!!!!!!!");
         checkboxConfirmation.click();*/
-    }
+        }
 }
 
 

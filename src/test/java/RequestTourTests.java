@@ -5,14 +5,10 @@ public class RequestTourTests extends BaseUi{
 
     String currentTourRequest;
 
-
-
     @Test
     public void testRequestTour(){
-        requestTourPage.RequestTourSection();
-        currentTourRequest = driver.getCurrentUrl();
-        System.out.println(currentTourRequest);
-        Assert.assertEquals(currentTourRequest, Data.expectedTourRequest);
+        String tourAssertions = requestTourPage.RequestTourSection();
+        Assert.assertEquals(tourAssertions, Data.expectedTourRequest);
     }
 }
 

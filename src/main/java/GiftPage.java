@@ -19,4 +19,5 @@ public void giftSection() {
     driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
     driver.findElement(Locators.LINK_TOUR_UKRAIN).click();
   }
+
 }

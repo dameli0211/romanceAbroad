@@ -10,12 +10,11 @@ public class RegistrationTests extends BaseUi {
         registrationPage.completeFirstPartOfRegistration();
         registrationPage.completeSecondPartOfRegistration();
 
+
         WebElement checkbox = driver.findElement(Locators.CHECKBOX_LIST);
         softAssert.assertEquals(!checkbox.isSelected(), "Element is displayed");
         checkbox.click();
     }
-
-
 }
 
 

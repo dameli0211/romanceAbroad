@@ -3,17 +3,11 @@ import org.testng.annotations.Test;
 
 public class TestGiftPage extends BaseUi {
 
-    String currentUrlGift;
-
     @Test
     public void assertionOfURL() {
+        String giftAssert = giftPage2.giftAssertions();
         Assert.assertTrue(driver.findElement(Locators.LINK_GIFT).isDisplayed(), "Element is not displayed");
-        driver.findElement(Locators.LINK_GIFT).click();
-        currentUrlGift = driver.getCurrentUrl();
-        System.out.println(currentUrlGift);
-        Assert.assertEquals(currentUrlGift, Data.expectedUrlGift);
-
-
+        Assert.assertEquals(giftAssert, Data.expectedUrlGift);
     }
 
     @Test

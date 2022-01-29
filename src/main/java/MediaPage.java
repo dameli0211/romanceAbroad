@@ -7,7 +7,13 @@ public class MediaPage extends BaseActions {
         super(driver, wait);
     }
 
-    public void mediaSection(){
+    String currentUrlMedia;
+
+    public String mediaSection(){
         driver.findElement(Locators.LINK_MEDIA).click();
+        currentUrlMedia = driver.getCurrentUrl();
+        System.out.println(currentUrlMedia);
+        return currentUrlMedia;
+
     }
 }
