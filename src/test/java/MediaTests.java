@@ -18,6 +18,17 @@ public class MediaTests extends BaseUi {
         searchPage.getDropDownListByValue(dropDownListMedia, "1");
         softAssert.assertAll();
     }
+
+
+    @Test
+    public void getSizeOfDropDown(){
+        driver.findElement(Locators.LINK_MEDIA).click();
+        int sizeOfDropDownListSortByMedia = mediaPage.getSizeDropDownList(Locators.DROP_DOWN_LIST_MEDIA);
+        for (int i = 0; i < sizeOfDropDownListSortByMedia; i++) {
+            mediaPage.getSizeDropDownList(Locators.DROP_DOWN_LIST_MEDIA);
+            searchPage.javaWaitSec(3);
+        }
+    }
 }
 
 

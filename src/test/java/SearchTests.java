@@ -2,8 +2,6 @@ import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import java.util.List;
-
 public class SearchTests extends BaseUi{
 
 
@@ -19,14 +17,33 @@ public class SearchTests extends BaseUi{
         searchPage.getDropDownListByValue(dropDownListSortBy, "date_created");
     }
 
+
     @Test
-    public void testListPhoto(){
-        searchPage.searchSection();
-        List<WebElement> listOfPhotos = driver.findElements(Locators.LIST_OF_PHOTOS);
-        System.out.println(listOfPhotos.size());
-        for (int i = 0; i <listOfPhotos.size(); i++) {
-            listOfPhotos.get(i).click();
-            System.out.println(listOfPhotos);
-        }
+    public void checkLinks(){
+        driver.findElement(Locators.LINK_SEARCH).click();
+        searchPage.checkLinksOnWebPage("//a", "//href");
     }
+
+    @Test
+    public void checkActiveLinks(){
+        driver.findElement(Locators.LINK_SEARCH).click();
+        searchPage.verifyLinkActive("https://romanceabroad.com/users/view/360/profile");
+    }
+
+    @Test
+    public void selectRandomDropDownList(){
+        driver.findElement(Locators.LINK_SEARCH).click();
+        int sizeOfDropDownListSortBy = searchPage.getSizeDropDownList(Locators.DROP_DOWN_LIST_SORT_BY_AGE);
+        for (int i = 0; i < sizeOfDropDownListSortBy; i++) {
+            searchPage.selectItemDropDownRandomOption(Locators.DROP_DOWN_LIST_SORT_BY_AGE, "Sort by");
+            mainIframePage.javaWaitSec(3);
+        }
+
+
+
+    }
+
+
+
+
 }

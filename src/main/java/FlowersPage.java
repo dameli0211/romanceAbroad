@@ -15,6 +15,4 @@ public class FlowersPage extends BaseActions {
         wait.until(ExpectedConditions.elementToBeClickable(driver.findElement(Locators.LINK_BUSKET_FLOWERS)));
         driver.findElements(Locators.LINK_BUSKET_FLOWERS).get(indexLinkFlower).click();
     }
-
-
 }

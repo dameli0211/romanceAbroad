@@ -45,4 +45,11 @@ public class HowWeWorkTests extends BaseUi{
             tabs = driver.findElements(Locators.LINK_INFORMATION_LIST);
         }
     }
+
+    @Test
+   public void valueListElement(){
+       driver.findElement(Locators.LINK_HOW_WE_WORK).click();
+       howWeWorkPage.clickValueOfList(Locators.LINK_TEXT_SHIPPING_TERMS, "Shipping terms");
+       mainIframePage.javaWaitSec(3);
+   }
 }

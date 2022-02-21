@@ -32,7 +32,9 @@ public class Locators {
     // search page
     public static final By LINK_SEARCH = By.xpath("//a[@href='https://romanceabroad.com/users/search']");
     public static final By DROP_DOWN_LIST_SORT_BY= By.xpath("//div[@class='form-inline']//select");
+    public static final By DROP_DOWN_LIST_SORT_BY_AGE = By.xpath("//select[@id='age_min']");
     public static final By LIST_OF_PHOTOS = By.xpath("//div[@class='row g-users-gallery']");
+
     // gifts page
     public static final By LINK_FLOWER_IMG = By.xpath("//a[@href='https://romanceabroad.com/store/sweets/12-flower_basket']");
     public static final By LINK_SPA = By.xpath("//a[@href='https://romanceabroad.com/store/sweets/2-massage_spa']");
@@ -45,6 +47,7 @@ public class Locators {
     public static final By GIFTS_TEXT_BUSKET = By.xpath("//div[text()='Flower basket']");
     public static final By GIFTS_TEXT_SPA = By.xpath("//div[text()='Spa']");
     public static final By GIFTS_TEXT_TEDDY = By.xpath("//div[text()='Teddy bear']");
+
     //blog page
     public static final By LINK_BLOG = By.xpath("//a[@href='https://romanceabroad.com/content/view/blog']");
     public static final By LINK_LIST_ADVERTISING = By.xpath("//ul//a[@href='https://romanceabroad.com/content/view/advertising']");
@@ -62,4 +65,5 @@ public class Locators {
     //main page framework
     public static final By IFRAME_TEST = By.xpath("//iframe[@src='https://www.youtube.com/embed/RRECuJzm3IY?start=85']");
     public static final By IFRAME_BUTTON = By.xpath("//button[@class='ytp-large-play-button ytp-button']");
+    public static final By GET_TITLE = By.xpath("//h1//strong[text()='Ukrainian Girls Dating Site']");
 }

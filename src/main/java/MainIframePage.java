@@ -11,5 +11,5 @@ import org.openqa.selenium.support.ui.WebDriverWait;
          WebElement ele = driver.findElement(Locators.IFRAME_TEST);
          driver.switchTo().frame(ele);
          driver.findElement(Locators.IFRAME_BUTTON).click();
-      }
+       }
      }
