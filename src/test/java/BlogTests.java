@@ -14,6 +14,7 @@ public class BlogTests extends BaseUi {
 
     @Test
     public void blogList(){
+
         blogPage.blogLists();
         }
 
@@ -21,7 +22,7 @@ public class BlogTests extends BaseUi {
     public void getIndexOfBlogList(){
         driver.findElement(Locators.LINK_BLOG).click();
         for (int i = 0; i < 21; i++) {
-             //driver.findElement(By.xpath("//ul[@class='nav nav-pills nav-stacked content-pages-tree']//li"));
+             driver.findElement(By.xpath("//ul[@class='nav nav-pills nav-stacked content-pages-tree']//li"));
         }
         blogPage.performClick(By.xpath("//ul[@class='nav nav-pills nav-stacked content-pages-tree']//li"), 3);
     }

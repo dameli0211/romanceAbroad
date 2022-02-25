@@ -5,6 +5,7 @@ public class FlowerTests extends BaseUi {
 
     @Test
     public void testFlower(){
+
         flowersPage.flowerSection();
     }
 

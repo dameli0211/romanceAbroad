@@ -41,7 +41,23 @@ public class RegistrationTests extends BaseUi {
         registrationPage.javaWaitSec(3);
         registrationPage.checkLinksOnWebPage("//img", "//src=https://romanceabroad.com/uploads/store/0/0/0/11/big-ffd05e6dee.jpg");
         registrationPage.checkLinksOnWebPage("//a", "//href=https://romanceabroad.com/store/sweets/20-tour_to_ukraine");
+    }
 
+    @Test
+    public void clickBookNow(){
+        WebElement ele = driver.findElement(By.xpath("//div[@class='discountalert']//a[@href ='https://romanceabroad.com/store/sweets/20-tour_to_ukraine']"));
+        registrationPage.perfomClick(ele);
+    }
+
+    @Test
+    public void enterData(){
+        List <WebElement> clickSignIn = driver.findElements(By.xpath("//div[@id='navbarResponsive']//ul[@class='navbar-nav']//li"));
+        for (int i = 0; i<clickSignIn.size(); i++) {
+            registrationPage.perfomClick(By.xpath("//div[@id='navbarResponsive']//ul[@class='navbar-nav']//li"), 7);
+            //registrationPage.javaWaitSec(3);
+        }
+        WebElement element = driver.findElement(By.xpath("//div[@class='col-xs-12']//input[@id='email']"));
+        registrationPage.ajaxSendKeys(element, "dameli02@gmail.com");
     }
 
 }

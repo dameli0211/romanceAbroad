@@ -11,7 +11,8 @@ public class RegistrationPage extends BaseActions {
     }
 
     public void clickJoinButton(){
-        driver.findElement(Locators.BUTTTON_REGISTRATION).click();
+
+            driver.findElement(Locators.BUTTTON_REGISTRATION).click();
     }
 
     public void completeFirstPartOfRegistration(){

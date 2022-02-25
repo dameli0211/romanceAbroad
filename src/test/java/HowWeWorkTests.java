@@ -50,6 +50,6 @@ public class HowWeWorkTests extends BaseUi{
    public void valueListElement(){
        driver.findElement(Locators.LINK_HOW_WE_WORK).click();
        howWeWorkPage.clickValueOfList(Locators.LINK_TEXT_SHIPPING_TERMS, "Shipping terms");
-       mainIframePage.javaWaitSec(3);
+        howWeWorkPage.javaWaitSec(3);
    }
 }
